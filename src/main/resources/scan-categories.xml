@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<document-definitions>
+    <category>
+        <display-name>Hypotheken</display-name>
+        <explanation>Alles over hypotheken</explanation>
+        <code>HYPO</code>
+        <examples>Hypotheek Jaaropgave</examples>
+    </category>
+    <category>
+        <display-name>Zorg</display-name>
+        <explanation>Zorgverzekering, EPD, correspondentie arts of ziekenhuis</explanation>
+        <code>ZORG</code>
+        <examples></examples>
+    </category>
+    <category>
+        <display-name>Kookrecepten</display-name>
+        <explanation>Ingescande recepten of print-screens van Allerhande etc</explanation>
+        <code>KOKEN</code>
+        <examples></examples>
+    </category>
+</document-definitions>
