@@ -19,11 +19,14 @@ import java.io.File;
 @Setter
 @Slf4j
 public class QuickLook implements Runnable {
-    private static QuickLook instance = new QuickLook();
+    private static QuickLook instance;
     private File file;
     private Process process;
 
     public static QuickLook getInstance(){
+        if (instance == null) {
+            instance = new QuickLook();
+        }
         return instance;
     }
 

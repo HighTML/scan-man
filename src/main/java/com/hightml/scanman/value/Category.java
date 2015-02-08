@@ -37,7 +37,7 @@ public class Category {
         SAXBuilder builder = new SAXBuilder();
         File xmlFile = new File(fileName);
 
-        List<Category> categories = new ArrayList<Category>();
+        List<Category> categories = new ArrayList<>();
 
         try {
 
@@ -48,22 +48,20 @@ public class Category {
             categories = processCategories(list);
 
 
-        } catch (IOException io) {
+        } catch (IOException | JDOMException io) {
             log.error("During reading XML", io);
-        } catch (JDOMException jdomex) {
-            log.error("During reading XML", jdomex);
-
         }
 
         return categories;
     }
 
     private static List<Category> processCategories(List<Element> list) {
-        List<Category> categories = new ArrayList<Category>();
-        for (int i = 0; i < list.size(); i++) {
-            Category category = processCategory(list.get(i));
+        List<Category> categories = new ArrayList<>();
+        for (Element node : list) {
+            Category category = processCategory(node);
             categories.add(category);
         }
+        return categories;
     }
 
     private static Category processCategory(Element node) {
